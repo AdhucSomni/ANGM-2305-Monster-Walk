@@ -4,8 +4,6 @@
 https://github.com/AdhucSomni/ANGM-2305-Monster-Walk.git
 
 ## Description
-1-2 sentence description of what it will do and how it relevant to media and digital arts.
-
 Monster Walk is a 2D side-scroll built in Python, featuring an animated character sprite moving through a looping environment. This project is connected to media and digital arts through its focus on design, animation, and the creation of digital art created using code.
 
 ## Features
@@ -38,6 +36,6 @@ Minimal Viable Outcome:
   1. Implement character movement using keyboard input and the walking cycle. 
   2. Begin constructing the side-scrolling environment.
 
-- Week N (Final)
+- Week 3 (Final)
   1. Refine visuals
   2. Debug and finalize repository with documentation and demo video.
