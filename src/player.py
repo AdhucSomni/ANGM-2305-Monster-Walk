@@ -20,8 +20,8 @@ class Player(pygame.sprite.Sprite):
         self.load_frames()
         self.current_frame_index = 0
         self.last_frame_time = 0
+        self.walk_frame_delay = 120
         self.state = "idle" 
-        self.walk_frame_delay = 100
 
         #adding what image to display and collison 
         self.image = self.idle_frames_right[0]
@@ -29,7 +29,7 @@ class Player(pygame.sprite.Sprite):
         self.rect.midbottom = start_pos
 
         #movement
-        self.speed = 300
+        self.speed = 250
 
     def load_frames(self):
         ''' loads all the pngs directly'''
@@ -70,12 +70,11 @@ class Player(pygame.sprite.Sprite):
         now = pygame.time.get_ticks()
 
         if self.state == "idle":
+            self.current_frame_index = 0
             if self.facing_left:
                 self.image = self.idle_frames_left[0]
             else:
                 self.image = self.idle_frames_right[0]
-            self.current_frame_index = 0
-
         else:
             if now - self.last_frame_time > self.walk_frame_delay:
                 self.last_frame_time = now
