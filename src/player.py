@@ -91,3 +91,6 @@ class Player(pygame.sprite.Sprite):
 
         velocity_x = 0
         if self.state == "move_left":
+            velocity_x = -self.speed
+        elif self.state == "move right":
+            velocity_x = self.speed
