@@ -22,3 +22,7 @@ def main():
     ground_y = screen_height - 40
 
     player = Player(start_pos=(screen_width // 2, ground_y))
+
+    running = True
+    while running:
+        dt = clock.tick(fps) / 1000
