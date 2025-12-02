@@ -30,3 +30,14 @@ class Player(pygame.sprite.Sprite):
 
         #movement
         self.speed = 300
+
+    def load_frames(self):
+        ''' loads all the pngs directly'''
+
+        def load_img(name):
+            path = os.path.join(self.sprite_folder, name)
+            return pygame.image.load(path).convert_alpha()
+        
+        #idle frame
+        idle_right = load_img("S1.png")
+        idle_left = pygame.transform.flip(idle_right, True, False)
