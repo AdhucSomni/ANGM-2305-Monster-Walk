@@ -17,7 +17,7 @@ class Player(pygame.sprite.Sprite):
         self.facing_left = False
 
         #pulling the 'frames/pngs' and forming the walking cycle stages
-        self._load_frames()
+        self.load_frames()
         self.current_frame_index = 0
         self.last_frame_time = 0
         self.state = "idle" 
