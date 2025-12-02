@@ -41,3 +41,9 @@ class Player(pygame.sprite.Sprite):
         #idle frame
         idle_right = load_img("S1.png")
         idle_left = pygame.transform.flip(idle_right, True, False)
+
+        #right facing walk frames
+        walk_r1 = load_img("S4.png")
+        walk_r2 = load.img("S3.png")
+        
+        #left facing walk frames
