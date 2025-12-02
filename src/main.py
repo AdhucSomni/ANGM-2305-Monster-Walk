@@ -39,3 +39,8 @@ def main():
                 elif event.key == pygame.K_ESCAPE:
                     running = False
                 
+            if event.type == pygame.KEYUP:
+                if event.key == pygame.K_a:
+                    player.move_left = False
+                elif event.key == pygame.K_d:
+                    player.move_right = False
