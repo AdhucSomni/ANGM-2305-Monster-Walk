@@ -102,3 +102,8 @@ class Player(pygame.sprite.Sprite):
             self.rect.left = 0
         if self.rect.right > screen_width:
             self.rect.right = screen_width
+
+        self.update_animation()
+    
+    def draw(self, surface):
+        surface.blit(self.image, self.rect)
