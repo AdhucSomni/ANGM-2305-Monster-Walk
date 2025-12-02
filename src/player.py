@@ -80,7 +80,7 @@ class Player(pygame.sprite.Sprite):
                 self.last_frame_time = now
                 self.current_frame_index = (self.current_frame_index + 1) % 2
 
-            if self.state == "move left":
+            if self.state == "move_left":
                 self.image = self.walk_frames_left[self.current_frame_index]
             else:
                 self.image = self.walk_frames_right[self.current_frame_index]
@@ -91,7 +91,7 @@ class Player(pygame.sprite.Sprite):
         velocity_x = 0
         if self.state == "move_left":
             velocity_x = -self.speed
-        elif self.state == "move right":
+        elif self.state == "move_right":
             velocity_x = self.speed
 
         self.rect.x += int(velocity_x * dt)
