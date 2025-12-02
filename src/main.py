@@ -26,3 +26,7 @@ def main():
     running = True
     while running:
         dt = clock.tick(fps) / 1000
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
