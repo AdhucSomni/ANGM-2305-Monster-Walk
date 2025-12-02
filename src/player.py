@@ -60,3 +60,6 @@ class Player(pygame.sprite.Sprite):
         if self.move_left and not self.move_right:
             self.state = "move_left"
             self.facing_left = True
+        elif self.move_right and not self.move_left:
+            self.state = "move_right"
+            self.facing_left = False
