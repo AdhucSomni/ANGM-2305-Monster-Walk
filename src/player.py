@@ -70,12 +70,11 @@ class Player(pygame.sprite.Sprite):
         now = pygame.time.get_ticks()
 
         if self.state == "idle":
+            self.current_frame_index = 0
             if self.facing_left:
                 self.image = self.idle_frames_left[0]
             else:
                 self.image = self.idle_frames_right[0]
-            self.current_frame_index = 0
-            
         else:
             if now - self.last_frame_time > self.walk_frame_delay:
                 self.last_frame_time = now

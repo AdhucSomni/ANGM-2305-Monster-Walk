@@ -6,9 +6,9 @@ def main():
     pygame.init()
 
     display_info = pygame.display.Info()
-    SCREEN_WIDTH, SCREEN_HEIGHT = display_info.current_w, display_info.current_h
+    screen_width, screen_height = display_info.current_w, display_info.current_h
 
-    screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.FULLSCREEN)
+    screen = pygame.display.set_mode((screen_width, screen_height), pygame.FULLSCREEN)
     pygame.display.set_caption("Monster-Walk")
 
     clock = pygame.time.Clock()
@@ -19,9 +19,9 @@ def main():
     ground_color = (90, 180, 90) #green
 
     ground_height = 120
-    ground_y = SCREEN_HEIGHT - 40
+    ground_y = screen_height - 40
 
-    player = Player(start_pos=(SCREEN_WIDTH // 2, ground_y))
+    player = Player(start_pos=(screen_width // 2, ground_y))
 
     running = True
     while running:
@@ -45,17 +45,17 @@ def main():
                 elif event.key == pygame.K_d:
                     player.move_right = False
 
-        player.update(dt, SCREEN_WIDTH)
+        player.update(dt, screen_width)
 
         screen.fill(sky_color)
 
-        ground = pygame.Rect(
+        ground_rect = pygame.Rect(
             0,
-            SCREEN_HEIGHT - ground_height,
-            SCREEN_WIDTH,
+            screen_height - ground_height,
+            screen_width,
             ground_height
         )
-        pygame.draw.rect(screen, ground_color, ground)
+        pygame.draw.rect(screen, ground_color, ground_rect)
 
         player.draw(screen)
 
