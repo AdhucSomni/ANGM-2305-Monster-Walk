@@ -44,7 +44,7 @@ class Player(pygame.sprite.Sprite):
 
         #right facing walk frames
         walk_r1 = load_img("S2.png")
-        walk_r2 = load.img("S3.png")
+        walk_r2 = load_img("S3.png")
 
         #left facing walk frames
         walk_l1 = load_img("S4.png")
