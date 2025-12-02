@@ -94,3 +94,11 @@ class Player(pygame.sprite.Sprite):
             velocity_x = -self.speed
         elif self.state == "move right":
             velocity_x = self.speed
+
+        self.rect.x += int(velocity_x * dt)
+
+        #keep sprite in screen
+        if self.rect.left < 0:
+            self.rect.left = 0
+        if self.rect.right > screen_width:
+            self.rect.right = screen_width
