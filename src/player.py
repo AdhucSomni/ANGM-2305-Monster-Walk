@@ -84,4 +84,4 @@ class Player(pygame.sprite.Sprite):
             if self.state == "move left":
                 self.image = self.walk_frames_left[self.current_frame_index]
             else:
-                self.image = self.walk_frames_right[self.current_frame_index
+                self.image = self.walk_frames_right[self.current_frame_index]
