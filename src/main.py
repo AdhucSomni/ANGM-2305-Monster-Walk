@@ -9,4 +9,7 @@ def main():
     screen_width, screen_height = display.current_w, display.current_h
 
     screen = pygame.display.set_mode((screen_width, screen_height), pygame.FULLSCREEN)
-    
+    pygame.display.set_caption("Monster-Walk")
+
+    clock = pygame.time.clock()
+    fps = 60
