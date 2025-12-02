@@ -30,3 +30,12 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
+
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_a:
+                    player.move_left = True
+                elif event.key == pygame.K_d:
+                    player.move_right = True
+                elif event.key == pygame.K_ESCAPE:
+                    running = False
+                
