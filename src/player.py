@@ -75,3 +75,10 @@ class Player(pygame.sprite.Sprite):
             else:
                 self.image = self.idle_frames_right[0]
             self.current_frame_index = 0
+
+        else:
+            if now - self.last_frame_time > self.walk_frame_delay:
+                self.last_frame_time = now
+                self.current_frame_index = (self.current_frame_index + 1) % 2
+
+            if self.state == "move left":
