@@ -11,7 +11,7 @@ def main():
     screen = pygame.display.set_mode((screen_width, screen_height), pygame.FULLSCREEN)
     pygame.display.set_caption("Monster-Walk")
 
-    clock = pygame.time.clock()
+    clock = pygame.time.Clock()
     fps = 60
 
     #temp background while background png is finalized
