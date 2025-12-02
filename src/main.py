@@ -20,3 +20,5 @@ def main():
 
     ground_height = 80
     ground_y = screen_height - 40
+
+    player = Player(start_pos=(screen_width // 2, ground_y))
