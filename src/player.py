@@ -49,3 +49,9 @@ class Player(pygame.sprite.Sprite):
         #left facing walk frames
         walk_l1 = load_img("S4.png")
         walk_l2 = load_img("S5.png")
+
+        self.idle_frames_right = [idle_right]
+        self.idle_frames_left = [idle_left]
+
+        self.walk_frames_right = [walk_r1, walk_r2]
+        self.walk_frames_left = [walk_l1, walk_l2]
