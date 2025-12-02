@@ -13,3 +13,10 @@ def main():
 
     clock = pygame.time.clock()
     fps = 60
+
+    #temp background while background png is finalized
+    sky_color = (135, 206, 245) #light blue
+    ground_color = (90, 180, 90) #green
+
+    ground_height = 80
+    ground_y = screen_height - 40
