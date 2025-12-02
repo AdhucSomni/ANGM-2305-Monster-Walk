@@ -10,3 +10,8 @@ class Player(pygame.sprite.Sprite):
         project_folder = os.path.dirname(__file__)
         #find the sprites
         self.sprite_folder = os.path.join(project_folder, "Sprite pngs")
+
+        #movement
+        self.move_left = False
+        self.move_right = False
+        self.facing_left = False
