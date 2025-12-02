@@ -65,3 +65,8 @@ class Player(pygame.sprite.Sprite):
             self.facing_left = False
         else:
             self.state = "idle"
+
+    def update_animation(self):
+        now = pygame.time.get_ticks()
+
+        if self.state == "idle":
