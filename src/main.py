@@ -15,17 +15,17 @@ def main():
     fps = 60
 
     #temp background while background png is finalized
-    sky_color = (135, 206, 245) #light blue
+    sky_color = (135, 206, 235) #light blue
     ground_color = (90, 180, 90) #green
 
-    ground_height = 80
+    ground_height = 120
     ground_y = screen_height - 40
 
     player = Player(start_pos=(screen_width // 2, ground_y))
 
     running = True
     while running:
-        dt = clock.tick(fps) / 1000
+        dt = clock.tick(fps) / 1000.0
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -59,10 +59,10 @@ def main():
 
     player.draw(screen)
 
-    pygame.display.flip
+    pygame.display.flip()
 
 pygame.quit()
-sys.exit
+sys.exit()
 
 if __name__ == "__main__":
     main()
