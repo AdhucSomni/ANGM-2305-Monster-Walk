@@ -22,8 +22,11 @@ class Player(pygame.sprite.Sprite):
         self.last_frame_time = 0
         self.state = "idle" 
         self.walk_frame_delay = 100
-        
+
         #adding what image to display and collison 
         self.image = self.idle_frames_right[0]
         self.rect = self.image.get_rect()
         self.rect.midbottom = start_pos
+
+        #movement
+        self.speed = 300
