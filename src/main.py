@@ -44,3 +44,25 @@ def main():
                     player.move_left = False
                 elif event.key == pygame.K_d:
                     player.move_right = False
+
+    player.update(dt, screen_width)
+
+    screen.fill(sky_color)
+
+    ground = pygame.Rect(
+        0,
+        screen_height - ground_height,
+        screen_width,
+        ground_height
+    )
+    pygame.draw.rect(screen, ground_color, ground)
+
+    player.draw(screen)
+
+    pygame.display.flip
+
+pygame.quit()
+sys.exit
+
+if __name__ == "__main__":
+    main()
