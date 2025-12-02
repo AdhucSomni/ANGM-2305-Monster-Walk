@@ -55,3 +55,8 @@ class Player(pygame.sprite.Sprite):
 
         self.walk_frames_right = [walk_r1, walk_r2]
         self.walk_frames_left = [walk_l1, walk_l2]
+    
+    def update_state(self):
+        if self.move_left and not self.move_right:
+            self.state = "move_left"
+            self.facing_left = True
