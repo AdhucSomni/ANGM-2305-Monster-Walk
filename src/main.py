@@ -17,6 +17,14 @@ def main():
     clock = pygame.time.Clock()
     fps = 60
 
+    background = pygame.image.load("background/sunny_day.png")
+    bg_original_width, bg_original_height = background.get_size()
+
+    scale_fac = screen_height / bg_original_height
+    bg_width = int(bg_original_width * scale_fac)
+    bg_height = screen_height
+    background = pygame.transform.scale(background, (bg_width, bg_height))
+
     #temp background while background png is finalized
     #sky_color = (135, 206, 235) #light blue
     #ground_color = (90, 180, 90) #green
