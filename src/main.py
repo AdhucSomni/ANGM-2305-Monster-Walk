@@ -1,6 +1,9 @@
 import pygame
 import sys
+import os
+
 from player import Player
+from camera import Camera
 
 def main():
     pygame.init()
