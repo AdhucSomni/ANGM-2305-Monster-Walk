@@ -6,3 +6,4 @@ class Camera:
         self.offset_x = 0
 
     def follow(self, target_rect):
+        self.offset_x = target_rect.centerx - self.screen_width // 2
