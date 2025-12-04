@@ -96,13 +96,8 @@ class Player(pygame.sprite.Sprite):
 
         self.rect.x += int(velocity_x * dt)
 
-        #keep sprite in screen
-        if self.rect.left < 0:
-            self.rect.left = 0
-        if self.rect.right > screen_width:
-            self.rect.right = screen_width
-
         self.update_animation()
     
-    def draw(self, surface):
-        surface.blit(self.image, self.rect)
+    def draw(self, surface, offset_x=0):
+        screen_x = self.rect.x - offset_x
+        surface.blit(self.image, (screen_x, self.rect.y))
