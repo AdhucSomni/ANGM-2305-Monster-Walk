@@ -60,17 +60,14 @@ def main():
                     player.move_right = False
 
         player.update(dt, screen_width)
+        camera.follow(player.rect)
 
-        screen.fill(sky_color)
+        offset_x = camera.offset_x
 
-        ground_rect = pygame.Rect(
-            0,
-            screen_height - ground_height,
-            screen_width,
-            ground_height
-        )
-        pygame.draw.rect(screen, ground_color, ground_rect)
-
+        start_x = -offset_x % BG_WIDTH
+        y= 0
+        
+        
         player.draw(screen)
 
         pygame.display.flip()
