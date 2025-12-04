@@ -67,8 +67,12 @@ def main():
         start_x = -offset_x % BG_WIDTH
         y= 0
         
+        x = start_x - BG_WIDTH
+        while x < screen_width:
+            screen.blit(background, (x, y))
+            x += BG_WIDTH
         
-        player.draw(screen)
+        player.draw(screen, offset_x=offset_x)
 
         pygame.display.flip()
 
