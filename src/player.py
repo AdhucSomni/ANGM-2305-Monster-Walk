@@ -33,7 +33,7 @@ class Player(pygame.sprite.Sprite):
         self.speed = 250
 
     def load_frames(self):
-        ''' loads all the pngs directly'''
+        ''' loads all the pngs from the Sprite png folder'''
         def load_img(name):
             path = os.path.join(self.sprite_folder, name)
             return pygame.image.load(path).convert_alpha()
