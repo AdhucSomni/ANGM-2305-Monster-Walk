@@ -18,11 +18,11 @@ def main():
     fps = 60
 
     #temp background while background png is finalized
-    sky_color = (135, 206, 235) #light blue
-    ground_color = (90, 180, 90) #green
+    #sky_color = (135, 206, 235) #light blue
+    #ground_color = (90, 180, 90) #green
 
-    ground_height = 120
-    ground_y = screen_height - 40
+    #ground_height = 120
+    #ground_y = screen_height - 40
 
     player = Player(start_pos=(screen_width // 2, ground_y))
 
