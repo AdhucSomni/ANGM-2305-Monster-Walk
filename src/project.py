@@ -115,3 +115,7 @@ def main():
     scale = screen_h / h
     background_w = int(w * scale)
     background = pygame.transform.scale(background, (background_w, screen_h))
+
+    ground_y = screen_h - 80
+    player = Player((screen_w //w, ground_y))
+    camera = Camera()
