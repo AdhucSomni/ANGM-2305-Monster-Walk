@@ -144,3 +144,21 @@ def main():
 
         player.update(dt)
         camera.follow(player.rect)
+
+        offset_x = camera.offset_x
+
+        start_x = -offset_x % background_w
+        x = start_x - background_w
+        while x < screen_w:
+            screen.blit(background, (x, 0))
+            x += background_w
+        
+        player.draw(screen, offset_x)
+
+        pygame.display.flip()
+
+    pygame.quit()
+    sys.exit()
+
+if __name__ == "__main__":
+    main()
