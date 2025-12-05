@@ -108,3 +108,10 @@ def main():
         def draw(self, surface, offset_x):
             screen_x = self.rect.x - offset_x
             surface.blit(self.image, (screen_x, self.rect.y))
+
+    background = pygame.image.load("background/sunny_day.png").convert()
+
+    w, h = background.get_size()
+    scale = screen_h / h
+    background_w = int(w * scale)
+    background = pygame.transform.scale(background, (background_w, screen_h))
