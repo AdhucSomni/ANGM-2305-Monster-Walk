@@ -119,3 +119,28 @@ def main():
     ground_y = screen_h - 80
     player = Player((screen_w //w, ground_y))
     camera = Camera()
+
+    running = True
+    while running:
+        dt = clock.tick(fps) / 1000.0
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_a:
+                    player.move_left = True
+                elif event.key == pygame.K_d:
+                    player.move_right = True
+                elif event.key == pygame.K_ESCAPE:
+                    running = False
+                
+            if event.type == pygame.KEYUP:
+                if event.key == pygame.K_a:
+                    player.move_left = False
+                elif event.key == pygame.K_d:
+                    player.move_right = False
+
+        player.update(dt)
+        camera.follow(player.rect)
