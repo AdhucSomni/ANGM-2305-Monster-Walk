@@ -86,10 +86,13 @@ class Camera:
 
     def follow(self, rect):
         """
-        updates
+        updates camera position to follow a target rectangle.
+
+        Centers the camera on the target's horizontal center position to keep target
+        appearing in the middle of the window.
         
-        :param self: Description
-        :param rect: Description
+        :param rect: the target rectangle to follow. (centered on player)
+        :type rect: pygame.Rect
         """
         self.offset_x = rect.centerx - self.screen_w // 2
 
