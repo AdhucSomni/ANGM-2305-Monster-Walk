@@ -3,7 +3,10 @@ import sys
 
 def main():
     """
-    Docstring for main
+    Main game loop function.
+
+    Initializes pygame, sets up the display, loads class objects, scales background, 
+    runs the main game loop to handle events, and updates.
     """
     pygame.init()
 
