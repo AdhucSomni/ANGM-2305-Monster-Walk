@@ -98,7 +98,7 @@ class Camera:
 
 class Player(pygame.sprite.Sprite):
     """ 
-    Player sprite class with movement and animation.
+    Player sprite class with controllable movement and animation.
     
     Handles player movement, animation states (idle and moving),
     and drawing with direction specific sprite pngs.
@@ -133,16 +133,12 @@ class Player(pygame.sprite.Sprite):
 
     def load_frames(self):
         """
-        Docstring for load_frames
+        Loads the sprite frames.
         
-        :param self: Description
+        Loads idle and walking frames for left and right directions.
         """
         def load(name):
-            """
-            Docstring for load
-            
-            :param name: Description
-            """
+            """ Helper function to load the sprite images"""
             return pygame.image.load(f"{self.sprite_folder}/{name}").convert_alpha()
         
         idle = load("S1.png")
