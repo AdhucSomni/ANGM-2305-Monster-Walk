@@ -158,9 +158,10 @@ class Player(pygame.sprite.Sprite):
 
     def update_state(self):
         """
-        Docstring for update_state
+        Updates player's movement state based on input flags.
         
-        :param self: Description
+        Sets self.state to either "move_left", "move_right", or "idle" based on flags, 
+        and updates direction the sprite is facing.
         """
         if self.move_left and not self.move_right:
             self.state = "move_left"
