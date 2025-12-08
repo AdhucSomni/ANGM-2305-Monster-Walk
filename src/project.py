@@ -2,6 +2,9 @@ import pygame
 import sys
 
 def main():
+    """
+    Docstring for main
+    """
     pygame.init()
 
     info = pygame.display.Info()
@@ -65,17 +68,37 @@ def main():
     sys.exit()
 
 class Camera:
+    """
+    Docstring for Camera
+    """
+    def __init__(self, screen_w):
+        """
+        Docstring for __init__
+        
+        :param self: Description
+        :param screen_w: Description
+        """
+        self.offset_x = 0
+        self.screen_w = screen_w
 
-        def __init__(self, screen_w):
-            self.offset_x = 0
-            self.screen_w = screen_w
-
-        def follow(self, rect):
-            self.offset_x = rect.centerx - self.screen_w // 2
+    def follow(self, rect):
+        """
+        Docstring for follow
+        
+        :param self: Description
+        :param rect: Description
+        """
+        self.offset_x = rect.centerx - self.screen_w // 2
 
 class Player(pygame.sprite.Sprite):
 
     def __init__(self, start_pos):
+        """
+        Docstring for __init__
+        
+        :param self: Description
+        :param start_pos: Description
+        """
         super().__init__()
 
         self.sprite_folder = "Sprite pngs"
@@ -97,8 +120,17 @@ class Player(pygame.sprite.Sprite):
         self.speed = 250
 
     def load_frames(self):
-
+        """
+        Docstring for load_frames
+        
+        :param self: Description
+        """
         def load(name):
+            """
+            Docstring for load
+            
+            :param name: Description
+            """
             return pygame.image.load(f"{self.sprite_folder}/{name}").convert_alpha()
         
         idle = load("S1.png")
@@ -117,6 +149,11 @@ class Player(pygame.sprite.Sprite):
         self.walk_frames_left = [walk_l1, walk_l2]
 
     def update_state(self):
+        """
+        Docstring for update_state
+        
+        :param self: Description
+        """
         if self.move_left and not self.move_right:
             self.state = "move_left"
             self.facing_left = True
@@ -127,6 +164,11 @@ class Player(pygame.sprite.Sprite):
             self.state = "idle"
 
     def update_animation(self):
+        """
+        Docstring for update_animation
+        
+        :param self: Description
+        """
         now = pygame.time.get_ticks()
 
         if self.state == "idle":
@@ -145,6 +187,12 @@ class Player(pygame.sprite.Sprite):
             else:
                 self.image = self.walk_frames_right[self.current_frame_index]
     def update(self, dt):
+        """
+        Docstring for update
+        
+        :param self: Description
+        :param dt: Description
+        """
         self.update_state()
 
         velocity_x = 0
@@ -158,6 +206,13 @@ class Player(pygame.sprite.Sprite):
         self.update_animation()
 
     def draw(self, surface, offset_x):
+        """
+        Docstring for draw
+        
+        :param self: Description
+        :param surface: Description
+        :param offset_x: Description
+        """
         screen_x = self.rect.x - offset_x
 
         bob = 0
