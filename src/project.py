@@ -106,10 +106,10 @@ class Player(pygame.sprite.Sprite):
 
     def __init__(self, start_pos):
         """
-        Docstring for __init__
+        Initializes the player class.
         
-        :param self: Description
-        :param start_pos: Description
+        :param start_pos: the starting (x, y) position for the sprites midbottom.
+        :type start_pos: tuple 
         """
         super().__init__()
 
