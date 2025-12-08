@@ -174,9 +174,10 @@ class Player(pygame.sprite.Sprite):
 
     def update_animation(self):
         """
-        Docstring for update_animation
-        
-        :param self: Description
+        Changes the current sprite image being displayed based on state and timing.
+
+        Handles frame cycling for movement and sets the correct sprite based on 
+        movement state and direction.
         """
         now = pygame.time.get_ticks()
 
