@@ -159,7 +159,15 @@ class Player(pygame.sprite.Sprite):
 
     def draw(self, surface, offset_x):
         screen_x = self.rect.x - offset_x
-        surface.blit(self.image, (screen_x, self.rect.y))
+
+        bob = 0
+        if self.state != "idle":
+                if self.current_frame_index == 0:
+                    bob = 2
+                else:
+                    bob = -2
+
+        surface.blit(self.image, (screen_x, self.rect.y + bob))
 
 if __name__ == "__main__":
     main()
