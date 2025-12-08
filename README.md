@@ -4,8 +4,8 @@
 Demo Video: <URL>
 
 ## GitHub Repository
-GitHub Repo: <URL>
+GitHub Repo: <https://github.com/AdhucSomni/ANGM-2305-Monster-Walk.git>
 
 ## Description
 
-## Resources used to research
+### Resources used to research
