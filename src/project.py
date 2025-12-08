@@ -97,6 +97,12 @@ class Camera:
         self.offset_x = rect.centerx - self.screen_w // 2
 
 class Player(pygame.sprite.Sprite):
+    """ 
+    Player sprite class with movement and animation.
+    
+    Handles player movement, animation states (idle and moving),
+    and drawing with direction specific sprite pngs.
+    """
 
     def __init__(self, start_pos):
         """
