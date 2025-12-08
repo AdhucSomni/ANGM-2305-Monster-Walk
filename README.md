@@ -28,3 +28,12 @@ As for areas to be improved on, there are several ways to build on this project.
 
 
 ### Resources used to research
+Sprite animation: <https://youtu.be/s9OgFBq0qZM?si=zVzcLJXKUt-2oMYV , https://youtu.be/MYaxPa_eZS0?si=BLXo_GUMcEaQ8O5c , https://youtu.be/MYaxPa_eZS0?si=BLXo_GUMcEaQ8O5c , https://youtu.be/AY9MnQ4x3zk?si=ayhh2ssBNXNGW9bC>
+
+Parallax scrolling background: <https://youtu.be/ARt6DLP38-Y?si=eTkvitDSClzU640R , https://youtu.be/OAH8K5lVYOU?si=J-lxOtX9lzx-PH4x>
+
+Camera: <https://youtu.be/XmSv2V69Y7A?si=uRmMx3h1x0GquDJq, https://youtu.be/u7LPRqrzry8?si=3BOiqKReLjm0X1K3>
+
+Lesson notes
+
+pygame documentation: <https://www.pygame.org/docs/>
