@@ -77,17 +77,16 @@ class Camera:
     """
     def __init__(self, screen_w):
         """
-        Docstring for __init__
+        Initializes the camera class.
         
-        :param self: Description
-        :param screen_w: Description
+        :param screen_w: Width of the game window in pixels.
         """
         self.offset_x = 0
         self.screen_w = screen_w
 
     def follow(self, rect):
         """
-        Docstring for follow
+        updates
         
         :param self: Description
         :param rect: Description
