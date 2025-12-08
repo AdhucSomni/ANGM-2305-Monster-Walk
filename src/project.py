@@ -198,10 +198,9 @@ class Player(pygame.sprite.Sprite):
                 self.image = self.walk_frames_right[self.current_frame_index]
     def update(self, dt):
         """
-        Docstring for update
+        Updates Player position and animation in each frame based on movement flags.
         
-        :param self: Description
-        :param dt: Description
+        :param dt: Time elapsed in seconds since the last frame.
         """
         self.update_state()
 
@@ -217,11 +216,13 @@ class Player(pygame.sprite.Sprite):
 
     def draw(self, surface, offset_x):
         """
-        Docstring for draw
+        Draws the player sprite onto the screen.
+
+        Adjusts the sprite's position by camera offset before drawing.
         
-        :param self: Description
-        :param surface: Description
-        :param offset_x: Description
+        :param surface: the surface drawn on.
+        :param offset_x: Camera horizontal offset
+        :type offset_x: int
         """
         screen_x = self.rect.x - offset_x
 
