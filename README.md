@@ -1,7 +1,7 @@
 # Monster-Walk
 
 ## Demo
-Demo Video: <URL>
+Demo Video: <https://youtu.be/fRxpyD3WJPo>
 
 ## GitHub Repository
 GitHub Repo: <https://github.com/AdhucSomni/ANGM-2305-Monster-Walk.git>
