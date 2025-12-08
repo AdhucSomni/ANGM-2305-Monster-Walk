@@ -72,7 +72,8 @@ def main():
 
 class Camera:
     """
-    Docstring for Camera
+    Camera class for following the player along the x-axis.
+    Keeps sprite cenetered on the screen as it moves.
     """
     def __init__(self, screen_w):
         """
